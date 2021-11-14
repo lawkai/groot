@@ -63,7 +63,7 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: http4k-template
+          ECR_REPOSITORY: groot
           VERSION_TAG: ${{ steps.version.outputs.TAG_VERSION }}
           SHA_TAG: ${{ github.sha }}
         run: |
